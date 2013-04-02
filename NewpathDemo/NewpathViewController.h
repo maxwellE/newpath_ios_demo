@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewpathViewController : UIViewController
+@interface NewpathViewController : UIViewController{
+    __weak IBOutlet UILabel *printLabel;
+    __weak IBOutlet UIButton *printButton;
+    int clickCount;
+}
+- (IBAction)clickedPrintButton:(id)sender;
 
 @end

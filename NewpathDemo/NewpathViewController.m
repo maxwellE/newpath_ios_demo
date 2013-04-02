@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    clickCount = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)clickedPrintButton:(id)sender {
+    NSLog(@"CLICKED PRINT BUTTON");
+    clickCount+=1;
+    [printLabel setText:[NSString stringWithFormat:@"Clicked button %d times!",clickCount]];
+    
+}
 @end
